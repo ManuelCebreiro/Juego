@@ -16,17 +16,33 @@ body{
     height: 100vh;
 }
 .container{
-
-        border: solid rebeccapurple;
-        height: 100vh;
+        
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 10px solid rebeccapurple;
+        box-shadow: 0px 0px 10px 15px rgb(31, 255, 206);
+        height: 98vh;
+        width: 203vh;
         position: relative;
-        box-shadow: 0px 0px 24px 2px rgb(31, 255, 206);
         cursor: pointer;
         overflow: hidden;
+        animation: infinite resplandorAnimation 2s;
+
         border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3Epath%7Banimation:stroke 5s infinite linear%3B%7D%40keyframes stroke%7Bto%7Bstroke-dashoffset:776%3B%7D%7D%3C/style%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%232d3561' /%3E%3Cstop offset='25%25' stop-color='%23c05c7e' /%3E%3Cstop offset='50%25' stop-color='%23f3826f' /%3E%3Cstop offset='100%25' stop-color='%23ffb961' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3' stroke-dasharray='388'/%3E %3C/svg%3E") 1;
 }
-/*----------------------------------FONDO JUEGO ------------------------------/*/
 
+@keyframes resplandorAnimation {
+    /*resplandor verde*/
+    0%,100%{box-shadow: 0px 0px 10px 15px rgb(31, 255, 206);}
+    0%{box-shadow: 0px 0px 0px 1px rgb(31, 255, 206);}
+    50%{box-shadow: 0px 0px 0px 8px rgb(31, 255, 206);}
+    
+}
+/*----------------------------------FONDO JUEGO ------------------------------/*/
+@keyframes x {
+
+}
 
 .atari {
     font-family: 'press start 2p';
@@ -34,21 +50,19 @@ body{
     text-align: center;
     color: rgba(white, .9);
     text-shadow: 0 .1em 0 rgb(31, 255, 206);
-    background-color: rgba(black, .3);
+    background-color: rgba(black, .3);}
 /*https://codepen.io/maxakohler/pen/DgvaKP*/
 
-
-  }
 #btn{
     width: 8%;
     height: 6%;
+    border: 1%;
     position: absolute;
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
     animation: animacion 2s linear infinite;
-    box-shadow: 0px 0px 10px 10px rgb(31, 255, 206);
+    animation: infinite resplandorAnimation 2s;
 }
-
           
