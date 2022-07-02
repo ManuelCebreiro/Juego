@@ -1,0 +1,38 @@
+body{
+    background: url(https://wallpaperaccess.com/full/869.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+.container{
+
+        border: 10px solid rebeccapurple;
+        border-radius: 1em;
+        border: 10% ;
+        height: 100%;
+        position: relative;
+        box-shadow: 0px 0px 5px 2px #000;
+        cursor: pointer;
+        overflow: hidden;
+}
+.container::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-280deg);
+    width: 86%;
+    height: 101%;
+    background-image: conic-gradient(rgb(181, 0, 236) 0deg, rgb(0, 238, 255) 90deg, transparent 130deg, transparent 180deg, rgb(255, 0, 157)180deg, rgb(40, 209, 130) 270deg, transparent 310deg, transparent 360deg);
+    transition: transform 2s;
+}
+.container:hover::before{
+    transform: translate(-50%,-50%) rotate(-100deg);
+}
+.container::after{
+    background: url(https://wallpaperaccess.com/full/869.jpg) no-repeat center center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+          
